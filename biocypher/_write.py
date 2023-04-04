@@ -493,7 +493,7 @@ class _Neo4jBatchWriter:
 
                 # create list of lists and flatten
                 # removes need for empty check of property list
-                out_list = [[_id], props_list, [':LABEL']]
+                out_list = [[_id], props_list]
                 out_list = [val for sublist in out_list for val in sublist]
 
                 with open(header_path, 'w', encoding='utf-8') as f:
